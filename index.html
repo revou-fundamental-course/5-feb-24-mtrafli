@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Calculator</title>
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+        body {
+          box-sizing: border-box;
+          min-width: 200px;
+          max-width: 950px;
+          margin: 0 auto;
+          padding: 45px;
+        }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>  <!-- LaTeX for math thing   -->
+</head>
+
+<body>
+  <article class="markdown-body">
+  <h1><a id="user-content-h1" class="anchor" href="#kalkulator-konversi-suhu" aria-hidden="true"><span class="octicon octicon-link"></span></a><center>Temperature Calculator</center></h1>
+  <p style="font-size: 20px;">Instructions for Use:</p>
+  <ol>
+    <li>Enter The Numbers in the "Input Temperature" Column.</li>
+    <li>Select Conversion Type (Reverse Button to Quickly Change the Conversion Type; Convert Button to View Calculation Results).</li>
+  </ol>
+  <p>*Calculation Method Is an Explanation of The Calculations Carried Out.</p>
+  
+  <div class="container">
+    <div class="row">
+      <div class="box">
+        <label for="input-suhu">Input Temperature:</label>
+        <br>
+        <textarea type="text" id="input-suhu"></textarea>
+      </div>
+      <div class="box">
+        <label for="jenis-konversi">Conversion Type:</label>
+        <br>
+        <select id="jenis-konversi">
+          <option value="celsius-to-fahrenheit">Celsius to Fahrenheit</option>
+          <option value="fahrenheit-to-celsius">Fahrenheit to Celsius</option>
+        </select>
+        <button onclick="reverseKonversi()">Reverse</button>
+        <button onclick="konversi()">Convert</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="box">
+        <label for="output-suhu">Output:</label>
+        <br>
+        <textarea type="text" id="output-suhu" readonly></textarea>
+      </div>
+      <div class="box">
+        <label for="kalkulasi">Calculation Method:</label>
+        <br>
+        <textarea id="kalkulasi" readonly></textarea>
+      </div>
+    </div>   
+  </div>
+
+  <h1><a id="user-content-h1" class="anchor" href="#cara-konversi" aria-hidden="true"><span class="octicon octicon-link"></span></a><center>How Conversion Works</center></h1>
+  <div id="descRumus"></div>
+  <br>
+  <div id="rumus"></div>
+
+  <!-- membuat script agar elemen-elemen diatas dapat bekerja -->
+  <script src="./js/script.js"></script>
+  </article>
+</body>
+</html>
